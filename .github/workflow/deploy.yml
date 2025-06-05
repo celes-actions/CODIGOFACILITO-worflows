@@ -3,8 +3,15 @@ on: push
   
 jobs:
   first_jobs:
+    name: tutorial codigoFacilito actions
     runs-on: ubuntu-latest
 
     steps:
-      - name: hola mundo
-        run: echo "hola mundo2"
+      - name: working dir
+        run: ls -al
+
+      - name: action
+        uses: action/chechout@v4
+
+      - name: working dir after action
+        run: ls -al  
