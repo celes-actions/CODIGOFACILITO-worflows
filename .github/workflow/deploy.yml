@@ -8,10 +8,16 @@ jobs:
 
     steps:
       - name: working dir
-        run: ls -al
+        id: steps_1
+        run: echo "mi_variable_hola mundo" >> $GITHUB_OUTPUT
+
+      - name: obtener mensaje
+        run: echo "${{ steps_1.outputs.mi_variable_hola }}"
+
 
       - name: action
         uses: action/checkout@v4
+    
 
       - name: working dir after action
         run: ls -al  
