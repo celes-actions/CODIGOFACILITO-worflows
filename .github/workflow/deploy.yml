@@ -11,7 +11,7 @@ jobs:
         run: ls -al
 
       - name: action
-        uses: action/chechout@v4
+        uses: action/checkout@v4
 
       - name: working dir after action
         run: ls -al  
